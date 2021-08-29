@@ -74,6 +74,7 @@ const raden_shader = new THREE.ShaderMaterial({
           I = 0.5*pow(dot(R,Vision_vector),20.0);
         }
 
+        
         vec4 vvColor = vec4(vec3(lambertTerm*rgb)+vec3(I),1.0);
         gl_FragColor = vec4(vvColor);
       }
