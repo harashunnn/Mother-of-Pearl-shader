@@ -8,4 +8,4 @@ https://harashunnn.github.io/Mother-of-Pearl-shader/
 
 ## 参考文献
 
-[^paper]: 武孝.実測値を用いた螺鈿の質感表現.研究報告グラフィクスとCAD(CG).2012,No.14 ,p.1-4.
+[^paper]: 武孝.実測値を用いた螺鈿の質感表現.研究報告グラフィクスとCAD(CG).2012,No.14 ,p.1-4.:
