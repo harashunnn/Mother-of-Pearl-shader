@@ -65,7 +65,7 @@ const raden_shader = new THREE.ShaderMaterial({
         float aori_angle = cal_angle(Project_N,Normal_vector) - 0.5*3.145;
         float acceptance_angle = cal_angle(Project_N,Vision_vector)-3.145;
 
-        vec3 rgb = cal_RGB(0.4,0.25,0.25,aori_angle,acceptance_angle,angle_of_incidence,1.5);
+        vec3 rgb = cal_RGB(0.50,0.30,0.30,aori_angle,acceptance_angle,angle_of_incidence,1.5);
         float lambertTerm = pow(dot(Normal_vector,Light_vector),4.0);
         
         vec3 R = (2.0*Normal_vector*dot(Light_vector,Normal_vector)) - Light_vector;
