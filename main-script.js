@@ -9,9 +9,9 @@ function init(){
     scene = new THREE.Scene();
 
     camera = new THREE.PerspectiveCamera(15,window.innerWidth/window.innerHeight,0.1,1000)
-    camera.position.x = 15;
+    camera.position.x = 0;
     camera.position.y = 0;
-    camera.position.z = 0;
+    camera.position.z =  15;
     camera.lookAt(new THREE.Vector3(0, 0, 0));
     scene.add(camera);
 
@@ -49,7 +49,7 @@ function init(){
         stats.update();
         spherematerial.uniforms.time.value = 1.0;
         spherematerial.uniforms.resolution.value = new THREE.Vector2(window.screen.width,window.screen.height);
-        spherematerial.uniforms.light_vector.value = new THREE.Vector3(1,1,1);
+        spherematerial.uniforms.light_position.value = new THREE.Vector3(0,0,10);
         spherematerial.uniforms.camera_position.value = new THREE.Vector3(camera.position.x,camera.position.y,camera.position.z);
 
         requestAnimationFrame(render);
