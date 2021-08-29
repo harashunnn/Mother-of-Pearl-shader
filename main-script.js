@@ -49,7 +49,7 @@ function init(){
         stats.update();
         spherematerial.uniforms.time.value = 1.0;
         spherematerial.uniforms.resolution.value = new THREE.Vector2(window.screen.width,window.screen.height);
-        spherematerial.uniforms.light_position.value = new THREE.Vector3(0,0,10);
+        spherematerial.uniforms.light_position.value = new THREE.Vector3(-4,6,10);
         spherematerial.uniforms.camera_position.value = new THREE.Vector3(camera.position.x,camera.position.y,camera.position.z);
 
         requestAnimationFrame(render);
