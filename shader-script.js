@@ -65,15 +65,16 @@ const raden_shader = new THREE.ShaderMaterial({
         float aori_angle = cal_angle(Project_N,Normal_vector) - 0.5*3.145;
         float acceptance_angle = cal_angle(Project_N,Vision_vector)-3.145;
 
-        vec3 rgb = cal_RGB(0.6,0.35,0.35,aori_angle,acceptance_angle,angle_of_incidence,1.4);
+        vec3 rgb = vec3(0.0,0.0,0.0);
         float lambertTerm = pow(dot(Normal_vector,Light_vector),4.0);
         
         vec3 R = (2.0*Normal_vector*dot(Light_vector,Normal_vector)) - Light_vector;
         float I = 0.0;
+
         if (dot(Light_vector,Normal_vector) > 0.0){
           I = 0.5*pow(dot(R,Vision_vector),20.0);
+          rgb = cal_RGB(0.6,0.35,0.35,aori_angle,acceptance_angle,angle_of_incidence,1.4);
         }
-
         
         vec4 vvColor = vec4(vec3(lambertTerm*rgb)+vec3(I),1.0);
         gl_FragColor = vec4(vvColor);
